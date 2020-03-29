@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Items from '../containers/Items/Items';
 
 const Index = () => {
   return (
@@ -7,6 +8,8 @@ const Index = () => {
       <Link href='/sells'>
         <a>Sells</a>
       </Link>
+
+      <Items />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 {
-  "C:\\Users\\germa\\Desktop\\Shopping_Front\\noop": [
+  "./noop": [
     {
       "id": "./node_modules/next/dist/client/noop.js",
       "name": "./node_modules/next/dist/client/noop.js",
