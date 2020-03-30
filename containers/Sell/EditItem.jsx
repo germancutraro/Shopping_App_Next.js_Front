@@ -23,7 +23,7 @@ const EditItem = ({ itemId }) => {
 
     if (data)
       router.push({
-        pathname: '/item',
+        pathname: '/product',
         query: { id: data.updateItem.id }
       });
   };

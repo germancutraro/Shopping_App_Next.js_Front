@@ -7,6 +7,7 @@ export const GET_ITEM = gql`
       title
       description
       price
+      largeImage
     }
   }
 `;

@@ -19,16 +19,18 @@ const Item = ({ id, title, price, image }) => {
   const handleDelete = () => deleteItem({ variables: { id } });
 
   return (
-    <div>
-      {image && <img src={image} alt='' />}
-      <h3>{title}</h3>
-      <span>${price}</span>
+    <Link href={`/product?id=${id}`}>
+      <div>
+        {image && <img src={image} alt='' />}
+        <h3>{title}</h3>
+        <span>${price}</span>
 
-      <Link href={`/update?id=${id}`}>
-        <a>Edit</a>
-      </Link>
-      <p onClick={handleDelete}>Delete</p>
-    </div>
+        <Link href={`/update?id=${id}`}>
+          <a>Edit</a>
+        </Link>
+        <p onClick={handleDelete}>Delete</p>
+      </div>
+    </Link>
   );
 };
 

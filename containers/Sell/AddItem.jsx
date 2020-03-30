@@ -24,7 +24,7 @@ const AddItem = () => {
 
     if (data)
       router.push({
-        pathname: '/item',
+        pathname: '/product',
         query: { id: data.createItem.id }
       });
   };
