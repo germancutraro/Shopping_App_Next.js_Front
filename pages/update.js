@@ -1,11 +1,11 @@
 import { useRouter } from 'next/router';
-import EditItem from '../containers/Sell/EditItem';
+import EditProduct from '../containers/Products/EditProduct';
 
 const Update = () => {
   const router = useRouter();
   return (
     <div>
-      <EditItem itemId={router.query.id} />
+      <EditProduct productId={router.query.id} />
     </div>
   );
 };

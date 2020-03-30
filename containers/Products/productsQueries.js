@@ -12,3 +12,15 @@ export const GET_ITEMS = gql`
     }
   }
 `;
+
+export const GET_ITEM = gql`
+  query getItem($id: ID!) {
+    item(where: { id: $id }) {
+      id
+      title
+      description
+      price
+      largeImage
+    }
+  }
+`;

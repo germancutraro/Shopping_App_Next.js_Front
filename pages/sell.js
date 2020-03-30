@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import AddItem from '../containers/Sell/AddItem';
+import AddProduct from '../containers/Products/AddProduct';
 
 const Sell = () => {
   return (
@@ -8,7 +8,7 @@ const Sell = () => {
       <Link href='/'>
         <a>Home</a>
       </Link>
-      <AddItem />
+      <AddProduct />
     </div>
   );
 };

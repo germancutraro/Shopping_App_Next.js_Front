@@ -1,10 +1,10 @@
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/router';
 import { useMutation } from '@apollo/react-hooks';
-import { CREATE_ITEM } from './sellMutations';
+import { CREATE_ITEM } from './productsMutations';
 import uploadImage from '../../utils/uploadImage';
 
-const AddItem = () => {
+const AddProduct = () => {
   const { register, handleSubmit } = useForm();
 
   const [createItem, { loading }] = useMutation(CREATE_ITEM);
@@ -47,4 +47,4 @@ const AddItem = () => {
   );
 };
 
-export default AddItem;
+export default AddProduct;

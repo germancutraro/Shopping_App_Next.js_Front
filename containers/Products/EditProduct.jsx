@@ -1,15 +1,14 @@
 import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/router';
 import { useMutation, useQuery } from '@apollo/react-hooks';
-import { UPDATE_ITEM } from './sellMutations';
-import { GET_ITEM } from './sellQueries';
+import { UPDATE_ITEM } from './productsMutations';
+import { GET_ITEM } from './productsQueries';
 
-const EditItem = ({ itemId }) => {
+const EditProduct = ({ productId }) => {
   const { register, handleSubmit } = useForm();
   const router = useRouter();
-  console.log('itemId', itemId);
   const { loading, error, data } = useQuery(GET_ITEM, {
-    variables: { id: itemId }
+    variables: { id: productId }
   });
   const [updateItem, { loading: editLoading }] = useMutation(UPDATE_ITEM);
 
@@ -17,7 +16,7 @@ const EditItem = ({ itemId }) => {
     const { data } = await updateItem({
       variables: {
         ...args,
-        id: itemId
+        id: productId
       }
     });
 
@@ -60,4 +59,4 @@ const EditItem = ({ itemId }) => {
   );
 };
 
-export default EditItem;
+export default EditProduct;

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useMutation } from '@apollo/react-hooks';
 
-import { DELETE_ITEM } from '../../containers/Sell/sellMutations';
+import { DELETE_ITEM } from '../../containers/Products/productsMutations';
 import { GET_ITEMS } from '../../containers/Products/productsQueries';
 
 const ProductItem = ({ id, title, price, image }) => {

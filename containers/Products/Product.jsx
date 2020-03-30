@@ -1,5 +1,5 @@
 import { useQuery } from '@apollo/react-hooks';
-import { GET_ITEM } from '../Sell/sellQueries';
+import { GET_ITEM } from './productsQueries';
 
 const Product = ({ productId }) => {
   const { loading, error, data } = useQuery(GET_ITEM, {
