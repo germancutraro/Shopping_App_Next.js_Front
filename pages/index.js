@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Items from '../containers/Items/Items';
+import Products from '../containers/Products/Products';
 
 const Index = () => {
   return (
@@ -9,7 +9,7 @@ const Index = () => {
         <a>Sells</a>
       </Link>
 
-      <Items />
+      <Products />
     </div>
   );
 };

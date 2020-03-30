@@ -1,10 +1,9 @@
-import React from 'react';
-import Item from '../../components/Item/Item';
+import Item from '../../components/ProductItem/ProductItem';
 // graphql
 import { useQuery } from '@apollo/react-hooks';
-import { GET_ITEMS } from './itemsQueries';
+import { GET_ITEMS } from './productsQueries';
 
-const Items = () => {
+const Products = () => {
   const { loading, error, data } = useQuery(GET_ITEMS, {
     fetchPolicy: 'network-only'
   });
@@ -21,4 +20,4 @@ const Items = () => {
   );
 };
 
-export default Items;
+export default Products;

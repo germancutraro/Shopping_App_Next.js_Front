@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import SingleProduct from '../containers/Items/Product';
+import SingleProduct from '../containers/Products/Product';
 
 const Product = () => {
   const router = useRouter();

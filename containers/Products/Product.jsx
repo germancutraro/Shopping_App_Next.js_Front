@@ -7,7 +7,6 @@ const Product = ({ productId }) => {
   });
 
   if (loading) return <h1>Loading...</h1>;
-  console.log('Proiduct', data);
   return (
     <div>
       <h1>{data.item.title}</h1>

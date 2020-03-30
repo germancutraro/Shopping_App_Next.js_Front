@@ -2,9 +2,9 @@ import Link from 'next/link';
 import { useMutation } from '@apollo/react-hooks';
 
 import { DELETE_ITEM } from '../../containers/Sell/sellMutations';
-import { GET_ITEMS } from '../../containers/Items/itemsQueries';
+import { GET_ITEMS } from '../../containers/Products/productsQueries';
 
-const Item = ({ id, title, price, image }) => {
+const ProductItem = ({ id, title, price, image }) => {
   const [deleteItem] = useMutation(DELETE_ITEM, {
     update(cache, payload) {
       const data = cache.readQuery({ query: GET_ITEMS });
@@ -34,4 +34,4 @@ const Item = ({ id, title, price, image }) => {
   );
 };
 
-export default Item;
+export default ProductItem;
