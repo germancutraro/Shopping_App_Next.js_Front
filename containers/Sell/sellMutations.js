@@ -37,3 +37,11 @@ export const UPDATE_ITEM = gql`
     }
   }
 `;
+
+export const DELETE_ITEM = gql`
+  mutation DeleteItem($id: ID!) {
+    deleteItem(id: $id) {
+      id
+    }
+  }
+`;
