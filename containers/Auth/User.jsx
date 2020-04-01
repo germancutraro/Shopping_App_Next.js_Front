@@ -1,12 +1,9 @@
-import { useQuery } from '@apollo/react-hooks';
-import { ME } from './authQueries';
-import ErrorMessage from '../../components/ErrorMessage';
-
-const User = () => {
-  const { data, loading, error } = useQuery(ME);
-  if (loading) return null;
-  if (error) return <ErrorMessage />;
-  return <div>{data.me && <p>user: {data.me.name}</p>}</div>;
+const User = ({ user }) => {
+  return (
+    <div>
+      <p>user: {user.name}</p>
+    </div>
+  );
 };
 
 export default User;
