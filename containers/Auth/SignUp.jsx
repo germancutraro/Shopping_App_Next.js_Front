@@ -7,7 +7,6 @@ const SignUp = () => {
   const [signUp] = useMutation(SIGN_UP);
 
   const onSubmit = async args => {
-    console.log(args);
     const user = await signUp({ variables: args });
     if (user) alert('created!');
   };
