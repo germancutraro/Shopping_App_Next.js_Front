@@ -6,11 +6,7 @@ const User = () => {
   const { data, loading, error } = useQuery(ME);
   if (loading) return null;
   if (error) return <ErrorMessage />;
-  return (
-    <div>
-      <p>user: {data.me.name}</p>
-    </div>
-  );
+  return <div>{data.me && <p>user: {data.me.name}</p>}</div>;
 };
 
 export default User;

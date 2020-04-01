@@ -1,17 +1,17 @@
 import { useRouter } from 'next/router';
 import { useForm } from 'react-hook-form';
 import { useMutation } from '@apollo/react-hooks';
-import { SIGN_UP } from './authMutations';
+import { SIGN_IN } from './authMutations';
 import { ME } from './authQueries';
 
-const SignUp = () => {
+const SignIn = () => {
   const { register, handleSubmit } = useForm();
-  const [signUp, { loading, error }] = useMutation(SIGN_UP);
+  const [signIn, { loading, error }] = useMutation(SIGN_IN);
 
   const router = useRouter();
 
   const onSubmit = async args => {
-    const user = await signUp({
+    const user = await signIn({
       variables: args,
       refetchQueries: [{ query: ME }]
     });
@@ -22,7 +22,6 @@ const SignUp = () => {
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <fieldset disabled={loading}>
-          <input ref={register} type='text' placeholder='name' name='name' />
           <input ref={register} type='text' placeholder='email' name='email' />
           <input
             ref={register}
@@ -30,7 +29,7 @@ const SignUp = () => {
             placeholder='password'
             name='password'
           />
-          <input type='submit' value='Sign Up' />
+          <input type='submit' value='Sign In' />
           {error && <p>{error?.message}</p>}
         </fieldset>
       </form>
@@ -38,4 +37,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignIn;
